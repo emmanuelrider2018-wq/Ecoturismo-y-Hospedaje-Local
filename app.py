@@ -1,6 +1,34 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
+import requests
+
+# Este es el enlace de tu canal (Webhook) que copiaste de Discord
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1516502496258949211/CIZ1mLxxBt2MRiqMA4pQ8cV0x56D512n2diBMPCD_X_76Bt5Rgg4PuMobJn1Mhp"
+
+def enviar_notificacion_discord(mensaje):
+    try:
+        # El "payload" es el paquete con el mensaje de texto que va a recibir Discord
+        payload = {"content": mensaje}
+        
+        # requests.post hace el envío real a través de internet
+        respuesta = requests.post(DISCORD_WEBHOOK_URL, json=payload, timeout=5)
+        
+        # Si la respuesta es exitosa (código 204), significa que ya llegó a Discord
+        if respuesta.status_code == 204:
+            print("¡Mensaje enviado con éxito a Discord! 🎉")
+        else:
+            print(f"Discord recibió la orden pero dió un aviso: Status {respuesta.status_code}")
+            
+    except Exception as e:
+        # Si la computadora no tiene internet o falla la dirección, te avisa aquí
+        print(f"Hubo un error al intentar conectar con Discord: {e}")
+
+# --- PRUEBA MANUAL ---
+# Cuando ejecutes este archivo, mandará este mensaje directo a tu celular/Discord:
+if __name__ == '__main__':
+    print("Enviando mensaje de prueba...")
+    enviar_notificacion_discord("¡Hola Emmanuel! Tu bot de Discord ya está funcionando de forma independiente. 🚀")
 
 # Base de datos local con 20 opciones de hospedaje y sus respectivas fotos
 HOTELES = [

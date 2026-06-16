@@ -98,7 +98,7 @@ HOTELES = [
         "precio": "$1,650 MXN",
         "servicios": ["Chimenea de Leña", "Asadores", "Estacionamiento Privado", "Área Infantil"],
         "contacto": "447-556-6778",
-        "imagen": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://th.bing.com/th/id/R.1938a4362c66c61297a1f2c766e11cd1?rik=Bn392%2bicYlkytg&pid=ImgRaw&r=0"
     },
     {
         "id": 6,
@@ -108,7 +108,7 @@ HOTELES = [
         "precio": "$750 MXN",
         "servicios": ["Wi-Fi Gratis", "Agua Caliente 24/7", "Guía de Turistas", "Terraza Común"],
         "contacto": "447-889-9001",
-        "imagen": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://tse4.mm.bing.net/th/id/OIP.D9JH37rnr98gi0Q-YGYRcgHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 7,
@@ -118,7 +118,7 @@ HOTELES = [
         "precio": "$900 MXN",
         "servicios": ["Wi-Fi Gratis", "TV Satelital", "Custodia de Equipaje"],
         "contacto": "447-101-2030",
-        "imagen": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://tse4.mm.bing.net/th/id/OIP.979nhBXn5djoXvNtMWL4tgHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 8,
@@ -128,7 +128,7 @@ HOTELES = [
         "precio": "$2,100 MXN",
         "servicios": ["Muelle Privado", "Chimenea", "Cocina Equipada", "Zona de Pesca"],
         "contacto": "447-223-3445",
-        "imagen": "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://tse1.mm.bing.net/th/id/OIP.2rSq5_uZJeLUSgM5r06jewHaEk?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 9,
@@ -138,17 +138,17 @@ HOTELES = [
         "precio": "$1,350 MXN",
         "servicios": ["Wi-Fi", "Restaurante-Bar", "Terraza Mirador", "Caja Fuerte"],
         "contacto": "447-334-4556",
-        "imagen": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://th.bing.com/th/id/OIP._RsEK2ZsTDKveD8Au4PA2AHaFj?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 10,
-        "nombre": "Hotel El Mineral",
+        "nombre": "Hotel  el oyo",
         "direccion": "Calle de la Mina #40, Zona Histórica",
         "descripcion": "Decoración temática inspirada en el pasado minero de Tlalpujahua, ofreciendo un viaje en el tiempo con comodidades modernas.",
         "precio": "$1,050 MXN",
         "servicios": ["Wi-Fi", "Recorridos Guiados", "Cafetería", "Agua Caliente"],
         "contacto": "447-445-5667",
-        "imagen": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://images.oyoroomscdn.com/uploads/hotel_image/95827/9facfaa269ad8d1a.jpg"
     },
     {
         "id": 11,
@@ -158,7 +158,7 @@ HOTELES = [
         "precio": "$1,400 MXN",
         "servicios": ["Jardín Grande", "Estacionamiento", "Asadores", "Acepta Mascotas"],
         "contacto": "447-556-6778",
-        "imagen": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://tse4.mm.bing.net/th/id/OIP.FwYBGaGWo-lTe3b-zh1ExgHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 12,
@@ -168,7 +168,7 @@ HOTELES = [
         "precio": "$2,400 MXN",
         "servicios": ["Desayuno Gourmet", "Wi-Fi Premium", "Spa", "Tinas de Hidromasaje"],
         "contacto": "447-667-7889",
-        "imagen": "https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://tse1.mm.bing.net/th/id/OIP.XVT0btq_vP57t72TRY-y8gHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 13,
@@ -178,7 +178,7 @@ HOTELES = [
         "precio": "$850 MXN",
         "servicios": ["Wi-Fi Gratis", "Patio Colonial", "Información Turística"],
         "contacto": "447-778-8990",
-        "imagen": "https://images.unsplash.com/photo-1504624244673-496552433c00?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://tse4.mm.bing.net/th/id/OIP.vh4tDSoQfge_bugxbm-L_wHaFN?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 14,
@@ -188,7 +188,7 @@ HOTELES = [
         "precio": "$700 MXN",
         "servicios": ["Áreas Comunes", "Comedor", "Wi-Fi", "Seguridad 24 horas"],
         "contacto": "447-889-9001",
-        "imagen": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://th.bing.com/th/id/R.3c56ad927f7a09120fb934926a415c28?rik=hp19LZkCZIjQsA&pid=ImgRaw&r=0"
     },
     {
         "id": 15,
@@ -198,59 +198,7 @@ HOTELES = [
         "precio": "$1,600 MXN",
         "servicios": ["Fogatero", "Balcón Privado", "Senderismo Guiado", "Estacionamiento"],
         "contacto": "447-990-0112",
-        "imagen": "https://images.unsplash.com/photo-1542718610-a1d656d1884c?w=500&auto=format&fit=crop&q=60"
-    },
-    {
-        "id": 16,
-        "nombre": "Hotel Colonial Tlalpujahua",
-        "direccion": "Allende #22, Centro",
-        "descripcion": "Con el clásico diseño de los portales tradicionales, amplios pasillos y una atmósfera tranquila en el corazón de la acción turística.",
-        "precio": "$1,150 MXN",
-        "servicios": ["Wi-Fi", "TV por cable", "Café de Cortesía", "Plancha a solicitud"],
-        "contacto": "447-112-3581",
-        "imagen": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&auto=format&fit=crop&q=60"
-    },
-    {
-        "id": 17,
-        "nombre": "Hotel Rancho Viejo",
-        "direccion": "Domicilio Conocido, Comunidad de Santa María",
-        "descripcion": "Un concept de hotel campestre que combina las comodidades modernas con actividades rurales y paseos a caballo.",
-        "precio": "$1,500 MXN",
-        "servicios": ["Caballerizas", "Alberca Techada", "Restaurante de Antojitos", "Wi-Fi"],
-        "contacto": "447-213-4711",
-        "imagen": "https://images.unsplash.com/photo-1535827841776-24afc882f03e?w=500&auto=format&fit=crop&q=60"
-    },
-    {
-        "id": 18,
-        "nombre": "Posada Santa Fe",
-        "direccion": "Galeana #5, Barrio de los Remedios",
-        "descripcion": "Pequeño y pintoresco hospedaje que destaca por la amabilidad de su personal y la espectacular limpieza de sus instalaciones.",
-        "precio": "$800 MXN",
-        "servicios": ["Wi-Fi Gratis", "Agua Caliente 24/7", "Amenities de Baño"],
-        "contacto": "447-314-1592",
-        "imagen": "https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?w=500&auto=format&fit=crop&q=60"
-    },
-    {
-        "id": 19,
-        "nombre": "Cabañas Villa de las Esferas",
-        "direccion": "Salida a las Torres de la Iglesia Hundida",
-        "descripcion": "Cabañas familiares muy cerca de los talleres de vidrio soplado de esferas navideñas. Espaciosas y con áreas verdes privadas.",
-        "precio": "$1,300 MXN",
-        "servicios": ["Área de Asado", "Juegos Infantiles", "Wi-Fi", "Estacionamiento"],
-        "contacto": "447-414-2135",
-        "imagen": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&auto=format&fit=crop&q=60"
-    },
-    {
-        "id": 20,
-        "nombre": "Hotel Vista Hermosa",
-        "direccion": "Camino al Mirador Poniente #31",
-        "descripcion": "Ubicado en el punto más alto del pueblo, ofrece la mejor vista panorámica para fotografiar los atardeceres de Tlalpujahua.",
-        "precio": "$1,250 MXN",
-        "servicios": ["Balcón Panorámico", "Wi-Fi", "Desayuno Americano", "TV HD"],
-        "contacto": "447-515-3141",
-        "imagen": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=500&auto=format&fit=crop&q=60"
-    }
-]
+        "imagen": "https://th.bing.com/th/id/R.a9a013b624057375a4c2879a3b7c172e?rik=YuM1N6%2b0YXBO1g&pid=ImgRaw&r=0"
 
 @app.route('/')
 def inicio():

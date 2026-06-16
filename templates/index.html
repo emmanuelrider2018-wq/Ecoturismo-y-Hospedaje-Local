@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoteles de Tlalpujahua | Guía Turística Local</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f6f0; color: #333; }
+        header { background-color: #800020; color: white; padding: 25px 15px; text-align: center; border-bottom: 4px solid #d4af37; }
+        header h1 { margin: 0; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; }
+        header p { margin: 5px 0 0 0; font-size: 14px; color: #f0e6d2; }
+        .container { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+        .hotel-card { background: white; border: 1px solid #e2dbcd; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .hotel-name { color: #800020; margin-top: 0; font-size: 20px; border-bottom: 1px solid #f0e6d2; padding-bottom: 5px; font-weight: bold; }
+        .address { font-size: 13px; color: #666; font-style: italic; margin-bottom: 10px; margin-top: 5px; }
+        .description { font-size: 14px; line-height: 1.5; margin-bottom: 15px; text-align: justify; }
+        .price-box { font-size: 16px; font-weight: bold; color: #27ae60; margin-bottom: 8px; }
+        .services { margin: 8px 0; padding: 0; list-style: none; }
+        .services li { display: inline-block; background: #ebdcb9; color: #5c4308; padding: 3px 8px; margin: 2px; font-size: 11px; border-radius: 3px; font-weight: bold; }
+        .contact-btn { display: inline-block; background-color: #800020; color: white; padding: 8px 15px; text-decoration: none; border-radius: 4px; font-size: 13px; margin-top: 10px; font-weight: bold; }
+        footer { text-align: center; padding: 20px; font-size: 12px; color: #777; background: #f1ebd9; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guía Turística de Hoteles en Tlalpujahua</h1>
+        <p>Plataforma Digital de Hospedaje • Proyecto de Ofimática</p>
+    </header>
+    <div class="container">
+        {% for hotel in hoteles %}
+        <div class="hotel-card">
+            <div class="hotel-name">{{ hotel.nombre }}</div>
+            <div class="address">📍 {{ hotel.direccion }}</div>
+            <div class="description">{{ hotel.descripcion }}</div>
+            <div class="price-box">Tarifa Promedio: {{ hotel.precio }} por noche</div>
+            <ul class="services">
+                {% for servicio in hotel.servicios %}
+                <li>✓ {{ servicio }}</li>
+                {% endfor %}
+            </ul>
+            <a href="tel:{{ hotel.contacto }}" class="contact-btn">📞 Llamar al {{ hotel.contacto }}</a>
+        </div>
+        {% endfor %}
+    </div>
+    <footer>
+        <p>© 2026 Plataforma de Hospedaje Local de Tlalpujahua - CBTIS Ofimática.</p>
+    </footer>
+</body>
+</html>

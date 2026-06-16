@@ -1,7 +1,16 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
+import requests
 
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1516502496258949211/CIZLmLxX8t2MRIqMA4pQ8cV0x56D512n2diBMPCD_X_76Bt5Rgg4PuWobJnWhpJLj0uT"
+
+def enviar_notificacion_discord(mensaje):
+    try:
+        payload = {"content": mensaje}
+        requests.post(DISCORD_WEBHOOK_URL, json=payload, timeout=5)
+    except Exception as e:
+        print(f"Error: {e}")
 # Base de datos local con 20 opciones de hospedaje y sus respectivas fotos
 HOTELES = [
     {

@@ -217,6 +217,7 @@ HOTELES = [
 
 @app.route('/')
 def inicio():
+    enviar_notificacion_discord("🔔 ¡Alguien acaba de entrar a tu web de Hoteles! 🏨✨")
     return render_template('index.html', hoteles=HOTELES)
 
 if __name__ == '__main__':

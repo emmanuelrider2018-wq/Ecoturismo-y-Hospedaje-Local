@@ -1,9 +1,9 @@
-from flask import Flask, render_template
-
-app = Flask(__name__)
+from flask import Flask, render_template, request
 import requests
 
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1516502496258949211/CIZLmLxX8t2MRIqMA4pQ8cV0x56D512n2diBMPCD_X_76Bt5Rgg4PuWobJnWhpJLj0uT"
+app = Flask(name)
+
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1516502496258949211/CIZlmLxxBt2MRiqMA4pQ8cV0x56D512n2diBMPCD_X_76Bt5Rgg4PuMobJnlMhp"
 
 def enviar_notificacion_discord(mensaje):
     try:

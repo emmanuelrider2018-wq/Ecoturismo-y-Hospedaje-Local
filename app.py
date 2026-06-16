@@ -1,30 +1,23 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
-from flask import Flask, render_template, request
-import requests
-
-app = Flask(__name__)
-
-# ==========================================
-# ⚙️ CONFIGURACIÓN DE TU BOT DE TELEGRAM
-# ==========================================
-# Tu Token ya está puesto aquí. Cuando tengas tu Chat ID con el @userinfobot, 
-# bórralo de entre las comillas y pon tu número ahí (ejemplo: "748392012")
+# --- CONFIGURACIÓN DE TELEGRAM ---
 TELEGRAM_TOKEN = "8806964612:AAGZEmfNZukmsiRc6mn_a2E6ssb__l2AMRk"
-TELEGRAM_CHAT_ID = "AQUÍ_PEGA_TU_CHAT_ID_DE_USERINFOBOT"
+TELEGRAM_CHAT_ID = "PEGAR_AQUÍ_TU_NUMERO_DE_CHAT_ID" 
 
 def enviar_notificacion_telegram(mensaje):
     try:
-        # Este comando usa la API de Telegram (sendMessage) para disparar el mensaje
         url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-        payload = {
-            "chat_id": TELEGRAM_CHAT_ID,
-            "text": mensaje
-        }
+        payload = {"chat_id": TELEGRAM_CHAT_ID, "text": mensaje}
         requests.post(url, json=payload, timeout=5)
     except Exception as e:
         print(f"Error al enviar a Telegram: {e}")
+
+# --- EN TU RUTA PRINCIPAL ---
+@app.route('/')
+def index():
+    enviar_notificacion_telegram("🔔 ¡Alguien acaba de entrar a la página de Ecoturismo!")
+    return render_template('index.html', hoteles=HOTELES)
 # Base de datos local con 20 opciones de hospedaje y sus respectivas fotos
 HOTELES = [
     {

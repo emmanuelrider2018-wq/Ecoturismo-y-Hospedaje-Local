@@ -1,35 +1,30 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
+from flask import Flask, render_template, request
 import requests
 
-# Este es el enlace de tu canal (Webhook) que copiaste de Discord
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1516502496258949211/CIZ1mLxxBt2MRiqMA4pQ8cV0x56D512n2diBMPCD_X_76Bt5Rgg4PuMobJn1Mhp"
+app = Flask(__name__)
 
-def enviar_notificacion_discord(mensaje):
+# ==========================================
+# ⚙️ CONFIGURACIÓN DE TU BOT DE TELEGRAM
+# ==========================================
+# Tu Token ya está puesto aquí. Cuando tengas tu Chat ID con el @userinfobot, 
+# bórralo de entre las comillas y pon tu número ahí (ejemplo: "748392012")
+TELEGRAM_TOKEN = "8806964612:AAGZEmfNZukmsiRc6mn_a2E6ssb__l2AMRk"
+TELEGRAM_CHAT_ID = "AQUÍ_PEGA_TU_CHAT_ID_DE_USERINFOBOT"
+
+def enviar_notificacion_telegram(mensaje):
     try:
-        # El "payload" es el paquete con el mensaje de texto que va a recibir Discord
-        payload = {"content": mensaje}
-        
-        # requests.post hace el envío real a través de internet
-        respuesta = requests.post(DISCORD_WEBHOOK_URL, json=payload, timeout=5)
-        
-        # Si la respuesta es exitosa (código 204), significa que ya llegó a Discord
-        if respuesta.status_code == 204:
-            print("¡Mensaje enviado con éxito a Discord! 🎉")
-        else:
-            print(f"Discord recibió la orden pero dió un aviso: Status {respuesta.status_code}")
-            
+        # Este comando usa la API de Telegram (sendMessage) para disparar el mensaje
+        url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+        payload = {
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": mensaje
+        }
+        requests.post(url, json=payload, timeout=5)
     except Exception as e:
-        # Si la computadora no tiene internet o falla la dirección, te avisa aquí
-        print(f"Hubo un error al intentar conectar con Discord: {e}")
-
-# --- PRUEBA MANUAL ---
-# Cuando ejecutes este archivo, mandará este mensaje directo a tu celular/Discord:
-if __name__ == '__main__':
-    print("Enviando mensaje de prueba...")
-    enviar_notificacion_discord("¡Hola Emmanuel! Tu bot de Discord ya está funcionando de forma independiente. 🚀")
-
+        print(f"Error al enviar a Telegram: {e}")
 # Base de datos local con 20 opciones de hospedaje y sus respectivas fotos
 HOTELES = [
     {

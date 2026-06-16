@@ -7,14 +7,15 @@ app = Flask(__name__)
 # ==========================================
 # ⚙️ CONFIGURACIÓN DE TU BOT DE TELEGRAM
 # ==========================================
-# Render lee el Token en secreto desde su panel, y tu ID ya está fijo aquí:
-TELEGRAM_TOKEN = os.environ.get('8806964612:AAGZEmfNZukmsiRc6mn_a2E6ssb__l2AMRk')
+# Render lee el Token desde el panel de Environment, y tu ID real ya está aquí puesto:
+TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = "7823310574"
 
 def enviar_notificacion_telegram(mensaje):
     try:
+        # Si por algo Render no lee el token, esto evita que la página se caiga
         if not TELEGRAM_TOKEN:
-            print("Error: No se encontró el TELEGRAM_TOKEN en Render")
+            print("Error: No se encontró el TELEGRAM_TOKEN en las variables de Render.")
             return
             
         url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
@@ -22,10 +23,10 @@ def enviar_notificacion_telegram(mensaje):
             "chat_id": TELEGRAM_CHAT_ID,
             "text": mensaje
         }
+        # Hacemos el envío a Telegram
         requests.post(url, json=payload, timeout=5)
     except Exception as e:
         print(f"Error al enviar a Telegram: {e}")
-
 # ==========================================
 # 🌲 RUTA PRINCIPAL (TU PÁGINA)
 # ==========================================

@@ -4,22 +4,39 @@ import requests
 
 app = Flask(__name__)
 
-# Render leerá esto desde las variables de entorno que configuraste
+# ==========================================
+# ⚙️ CONFIGURACIÓN DE TU BOT DE TELEGRAM
+# ==========================================
+# Render lee el Token en secreto desde su panel, y tu ID ya está fijo aquí:
 TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')
-TELEGRAM_CHAT_ID = "8806964612" 
+TELEGRAM_CHAT_ID = "7823310574"
 
 def enviar_notificacion_telegram(mensaje):
     try:
-        # Si el token es None, no va a enviar nada
         if not TELEGRAM_TOKEN:
-            print("Error: No se encontró el TELEGRAM_TOKEN")
+            print("Error: No se encontró el TELEGRAM_TOKEN en Render")
             return
             
         url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-        payload = {"chat_id": TELEGRAM_CHAT_ID, "text": mensaje}
+        payload = {
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": mensaje
+        }
         requests.post(url, json=payload, timeout=5)
     except Exception as e:
         print(f"Error al enviar a Telegram: {e}")
+
+# ==========================================
+# 🌲 RUTA PRINCIPAL (TU PÁGINA)
+# ==========================================
+@app.route('/')
+def index():
+    # Este comando te mandará el aviso a tu celular
+    enviar_notificacion_telegram("🔔 ¡Emmanuel, alguien acaba de entrar a tu página de Ecoturismo en Tlalpujahua!")
+    return render_template('index.html', hoteles=HOTELES) # Aquí sigue cargando tus 20 hoteles
+
+if __name__ == '__main__':
+    app.run(debug=True)
 # Base de datos local con 20 opciones de hospedaje y sus respectivas fotos
 HOTELES = [
     {

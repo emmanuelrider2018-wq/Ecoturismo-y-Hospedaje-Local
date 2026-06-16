@@ -68,7 +68,7 @@ HOTELES = [
         "precio": "$1,800 MXN",
         "servicios": ["Chimenea", "Área de Fogatas", "Pet Friendly", "Terraza Privada"],
         "contacto": "447-987-6543",
-        "imagen": "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://tse3.mm.bing.net/th/id/OIP.jU69BMjndnM4hTUKdPzRjwHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 3,
@@ -78,7 +78,7 @@ HOTELES = [
         "precio": "$950 MXN",
         "servicios": ["Wi-Fi Gratis", "Desayuno Incluido", "Atención Turística"],
         "contacto": "447-456-7890",
-        "imagen": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://tse4.mm.bing.net/th/id/OIP.FMxZajHF5D5FA0GMc80FqAHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 4,
@@ -88,7 +88,7 @@ HOTELES = [
         "precio": "$1,100 MXN",
         "servicios": ["Wi-Fi Gratis", "Televisión HD", "Servicio a la Habitación", "Restaurante"],
         "contacto": "447-112-2334",
-        "imagen": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://tse4.mm.bing.net/th/id/OIP.x_cbPyyvEizXqLrdGW9liwHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 5,

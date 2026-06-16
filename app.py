@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import requests
 
-app = Flask(name)
+app = Flask(__name__)
 
 DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1516502496258949211/CIZlmLxxBt2MRiqMA4pQ8cV0x56D512n2diBMPCD_X_76Bt5Rgg4PuMobJnlMhp"
 

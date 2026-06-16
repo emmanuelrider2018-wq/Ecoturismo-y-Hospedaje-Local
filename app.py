@@ -58,7 +58,7 @@ HOTELES = [
         "precio": "$1,200 MXN",
         "servicios": ["Wi-Fi Gratis", "Estacionamiento", "Agua Caliente", "TV por Cable"],
         "contacto": "447-123-4567",
-        "imagen": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&auto=format&fit=crop&q=60"
+        "imagen": "https://tse4.mm.bing.net/th/id/OIP.4jr9YDWBagUw837dXbR2vQHaHp?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 2,

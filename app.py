@@ -8,7 +8,7 @@ app = Flask(__name__)
 # ⚙️ CONFIGURACIÓN DE TU BOT DE TELEGRAM
 # ==========================================
 # Render lee el Token en secreto desde su panel, y tu ID ya está fijo aquí:
-TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')
+TELEGRAM_TOKEN = os.environ.get('8806964612:AAGZEmfNZukmsiRc6mn_a2E6ssb__l2AMRk')
 TELEGRAM_CHAT_ID = "7823310574"
 
 def enviar_notificacion_telegram(mensaje):

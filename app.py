@@ -199,7 +199,6 @@ HOTELES = [
         "servicios": ["Fogatero", "Balcón Privado", "Senderismo Guiado", "Estacionamiento"],
         "contacto": "447-990-0112",
         "imagen": "https://th.bing.com/th/id/R.a9a013b624057375a4c2879a3b7c172e?rik=YuM1N6%2b0YXBO1g&pid=ImgRaw&r=0"
-
 @app.route('/')
 def inicio():
     # Detectamos de dónde viene la visita (Celular, Computadora o UptimeRobot)
@@ -211,9 +210,6 @@ def inicio():
         enviar_notificacion_telegram(mensaje_alerta)
         
     return render_template('index.html', hoteles=HOTELES)
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,23 +1,25 @@
-from flask import Flask, render_template
+import os
+from flask import Flask, render_template, request
+import requests
 
 app = Flask(__name__)
-# --- CONFIGURACIÓN DE TELEGRAM ---
-TELEGRAM_TOKEN = "8806964612:AAGZEmfNZukmsiRc6mn_a2E6ssb__l2AMRk"
-TELEGRAM_CHAT_ID = "8806964612"
+
+# Render leerá esto desde las variables de entorno que configuraste
+TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')
+TELEGRAM_CHAT_ID = "8806964612" 
 
 def enviar_notificacion_telegram(mensaje):
     try:
+        # Si el token es None, no va a enviar nada
+        if not TELEGRAM_TOKEN:
+            print("Error: No se encontró el TELEGRAM_TOKEN")
+            return
+            
         url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
         payload = {"chat_id": TELEGRAM_CHAT_ID, "text": mensaje}
         requests.post(url, json=payload, timeout=5)
     except Exception as e:
         print(f"Error al enviar a Telegram: {e}")
-
-# --- EN TU RUTA PRINCIPAL ---
-@app.route('/')
-def index():
-    enviar_notificacion_telegram("🔔 ¡Emmanuel, alguien acaba de entrar a tu página de Ecoturismo en Tlalpujahua!")
-    return render_template('index.html', hoteles=HOTELES)
 # Base de datos local con 20 opciones de hospedaje y sus respectivas fotos
 HOTELES = [
     {

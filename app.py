@@ -3,7 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 # --- CONFIGURACIÓN DE TELEGRAM ---
 TELEGRAM_TOKEN = "8806964612:AAGZEmfNZukmsiRc6mn_a2E6ssb__l2AMRk"
-TELEGRAM_CHAT_ID = "PEGAR_AQUÍ_TU_NUMERO_DE_CHAT_ID" 
+TELEGRAM_CHAT_ID = "8806964612"
 
 def enviar_notificacion_telegram(mensaje):
     try:
@@ -16,7 +16,7 @@ def enviar_notificacion_telegram(mensaje):
 # --- EN TU RUTA PRINCIPAL ---
 @app.route('/')
 def index():
-    enviar_notificacion_telegram("🔔 ¡Alguien acaba de entrar a la página de Ecoturismo!")
+    enviar_notificacion_telegram("🔔 ¡Emmanuel, alguien acaba de entrar a tu página de Ecoturismo en Tlalpujahua!")
     return render_template('index.html', hoteles=HOTELES)
 # Base de datos local con 20 opciones de hospedaje y sus respectivas fotos
 HOTELES = [
